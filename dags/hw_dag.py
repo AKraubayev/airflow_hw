@@ -12,7 +12,7 @@ os.environ['PROJECT_PATH'] = path
 sys.path.insert(0, path)
 
 from modules.pipeline import pipeline
-# <YOUR_IMPORTS>
+
 
 args = {
     'owner': 'airflow',
@@ -31,5 +31,5 @@ with DAG(
         task_id='pipeline',
         python_callable=pipeline,
     )
-    # <YOUR_CODE>
+   
 
