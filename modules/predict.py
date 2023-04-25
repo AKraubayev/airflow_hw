@@ -9,6 +9,8 @@ from pathlib import Path
 import mlflow
 from mlflow.tracking import MlflowClient
 
+
+os.environ["MLFLOW_REGISTRY_URI"] = "/home/mlops/project/mlflow/"
 mlflow.set_tracking_uri("http://0.0.0.0:5000")
 mlflow.set_experiment("predict_of_model")
 
@@ -32,6 +34,10 @@ def predict():
             data.to_csv(f'{path}/data/predictions/preds_{datetime.now().strftime("%Y%m%d%H%M")}.csv')
 
             
+if __name__ == '__main__':
+    predict()
+    
+    
 with mlflow.start_run():
     mlflow.sklearn.log_model(model,
                              artifact_path="lr",
@@ -39,6 +45,3 @@ with mlflow.start_run():
     mlflow.log_artifact(local_path=path"/modules/predict.py",
                         artifact_path="predict_of_model code")
     mlflow.end_run()
-
-if __name__ == '__main__':
-    predict()
