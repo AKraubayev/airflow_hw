@@ -6,6 +6,12 @@ import glob
 from datetime import datetime
 from pathlib import Path
 
+import mlflow
+from mlflow.tracking import MlflowClient
+
+mlflow.set_tracking_uri("http://0.0.0.0:5000")
+mlflow.set_experiment("predict_of_model")
+
 def predict():
     path = os.path.expanduser('~/airflow_hw')
     with open(f'{path}/data/models/cars_pipe_202303221454.pkl', 'rb') as file:
@@ -25,6 +31,14 @@ def predict():
             print(data)
             data.to_csv(f'{path}/data/predictions/preds_{datetime.now().strftime("%Y%m%d%H%M")}.csv')
 
+            
+with mlflow.start_run():
+    mlflow.sklearn.log_model(model,
+                             artifact_path="lr",
+                             registered_model_name="lr")
+    mlflow.log_artifact(local_path=path"/modules/predict.py",
+                        artifact_path="predict_of_model code")
+    mlflow.end_run()
 
 if __name__ == '__main__':
     predict()
