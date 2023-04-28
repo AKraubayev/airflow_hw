@@ -1,0 +1,249 @@
+sudo visudo
+ip r
+ping mail.ru
+ping 192.168.50.142
+ip r
+netstat -taun
+sudo apt install net-tools
+netstat -taun
+sudo apt install openssh-server
+sudo systemctl status ssh
+netstat -taun
+w
+exit
+which python3
+ls -al /usr/bin/python3
+sudo apt install git -y
+ssh-keygen -t ed25519 -C "akraubaev@urfu.ru"
+ll .ssh/
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/mlops
+cat .ssh/mlops.pub 
+ssh -T git@github.com
+mkdir git
+cd git/
+ll
+git clone https://github.com/AKraubayev/MLOps-course.git
+ll
+ll MLOps-course/
+cd
+sudo python3 -m pip install dvc[ssh]
+sudo python3 -m pip3 install dvc[ssh]
+which python
+which python3
+sudo apt install python3-pip
+sudo python3 -m pip3 install dvc[ssh]
+sudo python3 -m pip install dvc[ssh]
+cd git/MLOps-course/
+ll
+dvc init
+dvc -f init
+dvc init -f
+ls -la
+ll
+git config user.email "akraubaev@urfu.ru"
+git config user.name "AKraubayev"
+mkdir data
+cd data
+ll
+cd ../
+dvr add data/README.txt.dvc 
+dvc add data/README.txt.dvc 
+ll
+ll .dvc
+cd 
+ll
+sudo rm -rf git/MLOps-course/
+ll
+cd git/
+ll
+git clone git@github.com:CyberLympha/MLOps-course.git
+cd MLOps-course/
+ll
+dvc init
+rm dvc.lock 
+rm dvc.yaml 
+rm -rf .dvc
+ll
+dvc init
+ll
+mkdir data
+cd data
+cd ..
+touch data/README.txt
+dvc add data/README.txt 
+echo "README.txt" > data/.gitignore 
+cat data/.gitignore 
+tree -a data -L 2
+sudo apt install tree
+tree -a data -L 2
+cat data/.gitignore 
+git add data/.gitignore data/README.txt.dvc 
+git commit -m "data/README.txt"
+git config --global user.email "akraubaev@urfu.ru"
+git config --global user.name "AKraubayev"
+git commit -m "data/README.txt"
+git push ssh://git@github.com/CyberLympha/MLOOPS-course
+git push git@github.com:AKraubayev/MLOps-course.git
+cd 
+cd git/
+ll
+rm -rf MLOps-course/
+git clone git@github.com:AKraubayev/MLOps-course.git
+ll
+cd MLOps-course/
+ll
+rm .dvc
+rm -rf .dvc
+rm -rf .dvcignore 
+rm -rf data
+rm -rf dvc.lock 
+rm -rf dvc.yaml 
+ll
+dvc init
+ll
+mkdir data
+touch data/README.txt
+dvc add data/README.txt 
+tree -a data -L 2
+cat data/.gitignore 
+tree -a data -L 2
+git add data/.gitignore data/README.txt.dvc 
+git commit -m "data/README.txt"
+git push git@github.com:AKraubayev/MLOps-course.git
+netstat -taun
+sudo systemctl status sshd
+ssh localhost
+w
+ifconfig 
+cat /etc/hosts
+sudo vim /etc/hosts
+sudo vi /etc/hosts
+pint ml-srv
+ping ml-srv
+ip r
+sudo nano /etc/hosts
+dvc remote add -d ssh-storage ssh://dvc@prod-srv/opt/datasets
+dvc remote list
+git config user.email "akraubaev@urfu.ru"
+git config user.name "AKraubayev"
+git commit .dvc/config -m "Configure remote storage"
+dvc remote modify ssh-storage user "mlops data-srv"
+dvc remote modify ssh-storage port 22
+dvc remote modify --local ssh-storage password "17Am@n18 data-srv"
+ll
+ll scripts/
+sudo apt install mc
+mc
+cd scripts/data_processing/
+ll
+chmod +x get_data.py 
+./get_data.py 
+cd
+cd git/MLOps-course/
+ll
+dvc add datasets/raw/train.csv datasets/raw/test.csv 
+dvc add datasets/raw/train.csv 
+git rm -r --cached 'datasets/raw/train.csv'
+git commit -m "stop tracking datasets/raw/train.csv"
+dvc add datasets/raw/train.csv 
+dvc add datasets/raw/test.csv 
+git rm -r --cached 'datasets/raw/test.csv'
+git commit -m "stop tracking datasets/raw/test.csv"
+dvc add datasets/raw/test.csv 
+dvc push
+cd /opt/
+ll
+cd 
+cd git/MLOps-course/
+ll
+dvc push
+cd /opt/
+sudo chown data-srv:data-srv -R datasets
+sudo chown mlops:mlops -R datasets
+sudo chown mlops:mlops -R datasets/
+mkdir datasets
+sudo mkdir datasets
+sudo chown mlops:mlops -R datasets/
+ls -la
+cd ~
+cd git/MLOps-course/
+dvc push
+./scripts/data_processing/get_data.py 
+dvc add datasets/raw/train.csv datasets/raw/test.csv
+dvc push
+ll /opt/datasets/
+sudo chown mlops:mlops -R /opt/datasets/
+dvc push
+cd /opt/
+ls -la
+date
+sudo timedatectl set-timezone Asia/Almaty
+date
+sudo chown mlops:mlops -R /opt/datasets/
+dvc push
+cd 
+cd git/MLOps-course/
+ll
+dvc push
+dvc push -v
+dvc config -l --show-origin
+dvc push
+ll ~/.ssh/
+ssh-copy-id prod-srv
+dvc push
+dvc remote add -d ssh-storage ssh://dvc@192.168.50.96/opt/datasets
+dvc remote add -d ssh-storage ssh://dvc@192.168.50.96/opt/datasets -f
+dvc remote list
+git commit .dvc/config  -m "Configure remote storage second"
+./scripts/data_processing/get_data.py 
+dvc add datasets/raw/train.csv datasets/raw/test.csv
+dvc push
+dvc push -v
+dvc config -l --show-origin
+cat .dvc/config
+ip r
+dvc remote add -d ssh-storage ssh://dvc@192.168.50.45/opt/datasets -f
+git commit .dvc/config  -m "Configure remote storage second"
+dvc push
+ip r
+dvc remote list
+git config user.email "akraubaev@urfu.ru"
+git config user.name "AKraubayev"
+git commit .dvc/config -m "Configure remote storage 3"
+dvc remote modify ssh-storage user "mlops"
+dvc remote modify ssh-storage port 22
+dvc remote modify --local ssh-storage password "17Am@n18"
+./scripts/data_processing/get_data.py 
+dvc add datasets/raw/train.csv datasets/raw/test.csv
+dvc push
+git status
+git add .
+git status
+git commit -m "Titanic raw train and test datasets was added"
+git push git@github.com:AKraubayev/MLOps-course.git
+git log -oneline
+git log --oneline
+git checkout HEAD^1 data/README.txt.dvc
+dvc checkout
+ll /opt/datasets/
+ip r
+sudo apt update && sudo apt upgrade -y
+ll /opt/datasets/
+cd 02
+ll
+ll /opt/datasets/d7/6f80daba47fd0b3567af9d8347cc82 
+vim text.txt
+vi text.txt
+exit
+du -sh /opt/datasets/
+mc
+dvc list
+dvc diff
+dvc diff /opt/datasets/
+poweroff
+sudo poweroff 
+ip r
+ll
+cd git/MLOps-course/
+ll

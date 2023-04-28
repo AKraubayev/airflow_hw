@@ -1,0 +1,51 @@
+sudo nano /etc/hosts
+ping data-srv
+ping ml-srv
+cd /opt/
+ll
+sudo mkdir datasets
+sudo chown mlops:mlops -R datasets/
+cd
+ll .ssh/
+cat .ssh/authorized_keys 
+ip r
+ll /opt/datasets/
+sudo apt install dvc[ssh]
+sudo apt update && sudo apt install docker-decktop -y
+sudo apt-get remove docker docker-engine docker.io containerd runc
+sudo apt-get update
+sudo apt-get install     ca-certificates     curl     gnupg     lsb-release
+sudo mkdir -m 0755 -p /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+echo   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt-get update
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+docker ps
+sudo systemctl status docker
+docker ps
+sudo usermod -aG docker mlops
+tmux detach
+docker ps
+exit
+tmux new -s prod-srv
+sudo atp install tmux
+sudo apt install tmux
+tmux new -s prod-srv
+tmux attach -t prod-srv
+docker ps
+exit
+sudo members docker
+sudo member docker
+tmux 
+tmux --help
+man tmux
+vi txt.txt
+sudo apt search cloud-init
+ping([1,2,3], "mail.ru")
+ping([1,2], "mail.ru")
+send_commands([1,2], "sh ip int br")
+send_commands([1], "sh ip int br")
+send_commands("sh ip int br")
+exit
+sudo poweroff 

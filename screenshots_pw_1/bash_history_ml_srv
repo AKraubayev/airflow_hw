@@ -1,0 +1,444 @@
+sudo visudo
+sudo apt install net-tools openssh-server -y
+sudo adduser - -home=/home/ml-eng ml-eng
+sudo adduser --home=/home/ml-eng ml-eng
+sudo adduser --home=/home/data-eng data-eng
+sudo apt update && sudo apt upgrade -y
+wget https://www.python.org/ftp/python/2.7.18/Python-2.7.18.tgz
+ls 
+ls -la Python-2.7.18.tgz 
+tar xf Python-2.7.18.tgz 
+ls -lh Python-2.7.18
+cd Python-2.7.18/
+ll
+sudo apt install build-essential
+./configure 
+make
+sudo make install
+python2
+which python2
+sudo apt install -y build-essential libssl-dev libffi-dev python3-dev
+cd
+mkdir Projects
+cd Projects/
+ll
+python3 -m venv env1
+sudo apt install python3.10-venv
+python3 -m venv env1
+ll
+ls env1/
+source env1/bin/activate
+which python
+which python3
+which python32
+which python2
+deactivate
+ip r
+sudo vi /etc/hosts
+sudo visudo 
+sudo vim /etc/hosts
+sudo vi /etc/hosts
+sudo nano /etc/hosts
+sudo python3 -m pip install jupyterhub
+sudo python3 -m pip3 install jupyterhub
+sudo apt install python3-pip
+sudo python3 -m pip3 install jupyterhub
+sudo python3 -m pip3.10 install jupyterhub
+ip r
+cd Downloads/
+sudo apt install ./code_1.76.2-1678817801_amd64.deb 
+jupyter
+jupyter-notebook 
+sudo python3 -m pip3 install jupyterhub
+sudo apt install python3-pip
+pip3 instal jupyterhub
+sudo pip3 install jupyterhub
+sudo pip3 install jupyter
+sudo pip3 install npm nodejs
+sudo npm install -g configurable-http-proxy
+npm install -g configurable-http-proxy
+sudo apt install npm
+sudo apt install jupyterhub
+sudo apt install jupyter
+sudo apt install npm nodejs
+sudo apt install configurable-http-proxy
+jupyterhub --help-all
+jupyterhub --generate-config
+netstat -ap | grep 8001
+sudo apt install tmux
+tmux new -s jupyter
+tmux ls
+tmux attach -t jupyter
+sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout «jupyter.key».key -out jupyter.crt
+jupyterhub --ip 0.0.0.0 --port 443 --ssl-key jupyter.key --ssl-cert jupyter.crt 
+ll
+jupyterhub --ip 0.0.0.0 --port 443 --ssl-key  «jupyter.key».key --ssl-cert jupyter.crt 
+ip r
+netstat
+netstat -taun
+ll
+mkdir git
+cd git/
+git clone git@github.com:AKraubayev/MLOps-course.git
+ll
+sudo apt install dvc[ssh]
+cd
+ssh-keygen -t ed25519
+ll .ssh/
+cat .ssh/mlops.pub 
+git clone git@github.com:AKraubayev/MLOps-course.git
+ll
+cd git/
+ll
+git clone git@github.com:AKraubayev/MLOps-course.git
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/mlops
+cd
+cat .ssh/mlops.pub 
+ssh -T git@github.com
+cd git/
+git clone git@github.com:AKraubayev/MLOps-course.git
+ll
+cd MLOps-course/
+sudo apt install python3-dev
+sudo apt install python3-pip
+sudo python3 -m pip install dvc[ssh]
+ll
+dvc remote modify --local ssh-storage password “17Am@n18”
+dvc init
+sudo python3 -m pip install dvc
+dvc remote modify --local ssh-storage password “17Am@n18”
+dvc remote modify --local ssh-storage password "17Am@n18"
+dvc pull
+ll
+sudo apt install vim
+vim scripts/data_processing/get_data.py 
+nano scripts/data_processing/get_data.py 
+mkdir scripts/data_scripts
+vim scripts/data_scripts/get_data.py
+chmod 764 scripts/data_scripts/get_data.py 
+ll data/
+./scripts/data_scripts/get_data.py 
+vim scripts/data_scripts/get_data.py
+./scripts/data_scripts/get_data.py 
+ll
+cd scripts/
+ll
+pip3 install catboost
+./data_scripts/get_data.py 
+cd ../
+mkdir data/raw
+./scripts/data_scripts/get_data.py 
+vim scripts/data_scripts/get_data.py 
+./scripts/data_scripts/get_data.py 
+python3 ./scripts/data_scripts/get_data.py 
+pwd
+cd data
+cd raw/
+pwd
+cat ../../scripts/data_scripts/get_data.py 
+python3 ./scripts/data_scripts/get_data.py 
+ll
+cd 
+cd git/MLOps-course/scripts/data_scripts/
+ll
+./get_data.py 
+pwd
+cat get_data.py 
+which python3
+python3
+pwd
+vim get_data.py 
+./get_data.py 
+vim get_data.py 
+./get_data.py 
+pwd
+vim get_data.py 
+./get_data.py 
+vim get_data.py 
+./get_data.py 
+cd
+cd git/MLOps-course/data/raw/
+ll
+cd ../
+ls data/raw/
+git status
+dvc remote modify --local ssh-storage password "17Am@n18"
+dvc pull
+dvc remote list
+dvc remote modify ssh-storage user mlops
+dvc remote modify ssh-storage port 2
+dvc remote modify ssh-storage port 22
+dvc remote modigy --local ssh-storage password 17Am@n18
+dvc remote modigy --local ssh-storage password "17Am@n18
+dvc remote modigy --local ssh-storage password "17Am@n18"
+dvc remote modify --local ssh-storage password "17Am@n18"
+dvc pull
+git status
+git add .
+git status
+git commit -m "from ML-SRV"
+git config --global user.email "akraubaev@urfu.ru"
+git config --global user.name "AKraubayev"
+git commit -m "from ML-SRV"
+git push
+dvc pull
+ll
+dvc pull
+mkdir data/baselines
+ll data/baselines/
+git status
+dvc add data/baselines/train.csv data/baselines/test.csv 
+dvc push
+dvc add data/raw/train.csv data/raw/test.csv 
+git rm -r --cached 'data/raw/train.csv'
+dvc add data/raw/train.csv data/raw/test.csv 
+git commit -m "stop tracking data/raw/test.csv"
+dvc add data/raw/train.csv data/raw/test.csv 
+git rm -r --cached 'data/raw/train.csv'
+git commit -m "stop tracking data/raw/test.csv"
+dvc add data/raw/train.csv data/raw/test.csv 
+git rm -r --cached 'data/raw/test.csv'
+git commit -m "stop tracking data/raw/test.csv"
+dvc add data/raw/train.csv data/raw/test.csv 
+dvc push
+jupyterhub
+jupyterhub &
+tmux detach
+ps
+netstat
+netstat -app | grep jupyter
+tmux detach
+netstat -ap | grep 8001
+tmux detach
+mc
+sudo apt install mc
+tmux -d
+ll
+exit
+pwd
+git status
+cd git/MLOps-course/
+git status
+ll
+git add datasets/.gitignore dvc.lock dvc.yaml scripts/data_processing/train_test_split.py 
+git commit -m "train_test_split stage added"
+git push
+dvc push
+dvc repro
+pip3 install sklearn
+dvc repro
+dvc push
+dvc repro
+dvc stage add -n train -p train.seed,train.max_depth -d scripts/model_learning/dt.py -d datasets/stage4/train.csv -o model.pkl python3 scripts/model_learning/dt.py datasets/stage4/train.csv model.pkl 
+dvc run -n evaluate -d scripts/model_learning/evaluate.py -d datasets/stage4/test.csv -d models/model.pkl  -M metrics.csv python3 scripts/model_learning/evaluate.py datasets/stage4/test.csv models/model.pkl
+dvc stage add -n train -p train.seed,train.max_depth -d scripts/model_learning/dt.py -d datasets/stage4/train.csv -o model.pkl python3 scripts/model_learning/dt.py datasets/stage4/train.csv model.pkl 
+dvc stage add -n train -p train.seed,train.max_depth -d scripts/model_learning/dt.py -d datasets/stage4/train.csv -o model.pkl python3 scripts/model_learning/dt.py datasets/stage4/train.csv model.pkl --force
+dvc stage add --force -n train -p train.seed,train.max_depth -d scripts/model_learning/dt.py -d datasets/stage4/train.csv -o model.pkl python3 scripts/model_learning/dt.py datasets/stage4/train.csv model.pkl 
+dvc run -n evaluate -d scripts/model_learning/evaluate.py -d datasets/stage4/test.csv -d models/model.pkl  -M metrics.csv python3 scripts/model_learning/evaluate.py datasets/stage4/test.csv models/model.pkl
+git push
+ll datasets/
+git status
+dvc push
+ll datasets/
+dvc run -n evaluate -d scripts/model_learning/evaluate.py -d datasets/stage4/test.csv -d models/model.pkl  -M metrics.csv python3 scripts/model_learning/evaluate.py datasets/stage4/test.csv models/model.pkl
+dvc stage add --force -n train -p train.seed,train.max_depth -d scripts/model_learning/dt.py -d datasets/stage4/train.csv -o model.pkl python3 scripts/model_learning/dt.py datasets/stage4/train.csv model.pkl 
+dvc metrics show
+dvc run -n evaluate -d scripts/model_learning/evaluate.py -d datasets/stage4/test.csv -d models/model.pkl  -M evaluate/score.json python3 scripts/model_learning/evaluate.py datasets/stage4/test.csv models/model.pkl
+dvc stage add --force -n train -p train.seed,train.max_depth -d scripts/model_learning/dt.py -d datasets/stage3/train.csv -o model.pkl python3 scripts/model_learning/dt.py datasets/stage4/train.csv model.pkl 
+dvc run -n evaluate -d scripts/model_learning/evaluate.py -d datasets/stage3/test.csv -d models/model.pkl  -M evaluate/score.json python3 scripts/model_learning/evaluate.py datasets/stage4/test.csv models/model.pkl
+dvc metrics show
+git status
+dvc run -n evaluate -d scripts/model_learning/evaluate.py -d datasets/stage4/test.csv -d models/model.pkl  -M evaluate/score.json python3 scripts/model_learning/evaluate.py datasets/stage4/test.csv models/model.pkl
+dvc stage add --force -n train -p train.seed,train.max_depth -d scripts/model_learning/dt.py -d datasets/stage4/train.csv -o model.pkl python3 scripts/model_learning/dt.py datasets/stage4/train.csv model.pkl 
+dvc run -n evaluate -d scripts/model_learning/evaluate.py -d datasets/stage4/test.csv -d models/model.pkl  -M evaluate/score.json python3 scripts/model_learning/evaluate.py datasets/stage4/test.csv models/model.pkl
+dvc params dif
+dvc params diff
+dvc push
+dvc stage add --force -n train -p train.seed,train.max_depth -d scripts/model_learning/dt.py -d datasets/stage4/train.csv -o model.pkl python3 scripts/model_learning/dt.py datasets/stage4/train.csv model.pkl
+dvc stage add --force -n split -p split.split_ratio -d scripts/data_processing/train_test_split.py -d datasets/stage3/train.csv -o datasets/stage4 python3 scripts/data_processing/train_test_split.py datasets/stage3/train.csv 
+git status
+git add datasets/.gitignore dvc.lock dvc.yaml scripts/data_processing/train_test_split.py 
+git commit -m "train_test added
+"
+git push
+dvc push
+dvc repro
+ll
+dvc repro
+pip3 install -U scikit-learn scipy matplotlib
+dvc push
+dvc repro
+dvc push
+git status
+git commit -m "train_test added
+"
+git push
+dvc push
+dvc stage add -n train -p train.seed,train.max_depth -d scripts/model_learning/dt.py -d datasets/stage4/train.csv -o model.pkl python3 scripts/model_learning/dt.py datasets/stage4/train.csv model.pkl
+dvc run -d evaluate -d scripts/model_learning/evaluate.py -d datasets/stage4/test.csv -d models/model.pkl -M metrics.csv python3 scripts/model_learning/evaluate.py datasets/stage4/test.csv models/model.pkl 
+dvc run -n evaluate -d scripts/model_learning/evaluate.py -d datasets/stage4/test.csv -d models/model.pkl -M metrics.csv python3 scripts/model_learning/evaluate.py datasets/stage4/test.csv models/model.pkl 
+pip3 install pickle
+dvc run -n evaluate -d scripts/model_learning/evaluate.py -d datasets/stage4/test.csv -d models/model.pkl -M evaluate/score.json python3 scripts/model_learning/evaluate.py datasets/stage4/test.csv models/model.pkl 
+dvc metrics show
+dvc params diff
+dvc run -n evaluate -d scripts/model_learning/evaluate.py -d datasets/stage4/test.csv -d models/model.pkl -M evaluate/score.json python3 scripts/model_learning/evaluate.py datasets/stage4/test.csv models/model.pkl 
+dvc params diff
+dvc metrics show
+dvc run -n evaluate -d scripts/model_learning/evaluate.py -d datasets/stage4/test.csv -d models/model.pkl -M evaluate/score.json python3 scripts/model_learning/evaluate.py datasets/stage4/test.csv models/model.pkl 
+dvc exp show
+pip3 install flask
+flask run -h 0.0.0.0 -p 11111
+Flask run -h 0.0.0.0 -p 11111
+flask run -h 0.0.0.0 -p 11111
+sudo apt install python3-flask
+flask run -h 0.0.0.0 -p 11111
+cd scripts/production/
+flask run -h 0.0.0.0 -p 11111
+flask app.py 
+flask run -h 0.0.0.0 -p 11111
+flask
+flask run -h 0.0.0.0 -p 11111
+chmod +x app.py 
+flask run -h 0.0.0.0 -p 11111
+cd Projects/
+ll
+cd 
+ll
+git clone ssh://git@gitlab.com/CyberLympha/MLOps-course
+ll
+git clone ssh://git@gitlab.com/CyberLympha/MLOps-course
+mkdir git
+cd git/
+ll
+cd MLOps-course/
+ll
+dvc pull
+cd scripts/data_processing/
+ll
+cat get_features.py 
+cat fill_na.py 
+cat change_text_to_numeric.py 
+cd ..
+ll
+dvc stage add -n get-feature -d datasets/raw/train.csv -d scripts/data_processing/get_features.py -o datasets/stage1 python3 scripts/data_processing/get_features.py datasets/raw/train.csv
+ls -la
+cat dvc.yaml 
+dvc stage add -n fill-na -d scripts/data_processing/fill_na.py -d datasets/stage1/train.csv -o datasets/stage2 python3 scripts/data_processing/fill_na.py datasets/stage1/train.csv
+cat dvc.yaml 
+dvc stage add -n text_to_numeric -d scripts/data_processing/change_text_to_numeric.py fill_na.py get_features.py -d scripts/data_processing/change_text_to_numeric.py -d datasets/stage2/train.csv -o datasets//stage3 python3 scripts/data_processing/change_text_to_numeric.py datasets/stage2/train.csv
+cat dvc.yaml 
+dvc stage add -n text_to_numeric -d scripts/data_processing/change_text_to_numeric.py fill_na.py get_features.py -d scripts/data_processing/change_text_to_numeric.py -d datasets/stage2/train.csv -o datasets/stage3 python3 scripts/data_processing/change_text_to_numeric.py datasets/stage2/train.csv
+vim dvc.yaml 
+dvc stage add -n text_to_numeric -d scripts/data_processing/change_text_to_numeric.py fill_na.py get_features.py -d scripts/data_processing/change_text_to_numeric.py -d datasets/stage2/train.csv -o datasets/stage3 python3 scripts/data_processing/change_text_to_numeric.py datasets/stage2/train.csv
+cat dvc.yaml 
+vim dvc.yaml 
+dvc dag
+dvc repo
+dvc repro
+git status
+vim .gitignore 
+git add .
+git status
+git commit -m "Data processing pipeline"
+git push
+vim .git/config 
+git push
+ssh -vT git@github.com
+ssh -vT AKraubayev@github.com
+git remote add origin https://github.com/AKraubayev/MLOps-course.git
+git remote -v
+cd ..
+ll
+cd MLOps-course/
+git status
+git push
+git remote add origin git@github.com:AKraubayev/MLOps-course.git
+git remote -v
+git remote set-url https://github.com/AKraubayev/MLOps-course.git
+git remote set-url add https://github.com/AKraubayev/MLOps-course.git
+git remote set-url --add https://github.com/AKraubayev/MLOps-course.git
+git push
+git remote set-url origin https://github.com/AKraubayev/MLOps-course.git
+git remote -v
+git push
+git remote set-url origin git@github.com:AKraubayev/MLOps-course.git
+git push
+cat ~/.ssh/mlops.pub 
+git push
+ll
+cat .git/config 
+cat .git/description 
+git remote -v
+ssh -T git@github.com
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/mlops
+ssh -T git@github.com
+git push
+git log - -oneline 
+git log --oneline 
+dvc push
+du -sh /opt/
+dvc push
+dvc --help
+dvc list
+dvc list url
+dvc help
+dvc config
+dvc help
+dvc get
+dvc help
+dvc ls
+dvc diff
+cd ..
+ll
+rm -rf MLOps-course/
+ll
+git clone https://github.com/AKraubayev/MLOps-course.git
+ll
+cd MLOps-course/
+dvc remote list
+dvc pull
+pwd
+dvc remote modify ssh-storage --local password 17Am@n18
+dvc pull
+ip r
+dvc stage add -n split -p split.split_ratio -d scripts/data_processing/train_test_split.py -d datasets/stage3/train.csv -o datasets/stage4 python3 scripts/data_processing/train_test_split.py datasets/stage3/train.csv 
+cat dvc.yaml 
+git status
+dvc run -n evaluate -d scripts/model_learn/evaluate.py -d datasets/stage4/test.csv -d models/model.pkl  -M metrics.csv python3 scripts/model_learn/evaluate.py datasets/stage4/test.csv models/model.pkl
+dvc run -n evaluate -d scripts/model_learn/evaluate.py -d datasets/stage4/test.csv -d models/model.pkl  -M metrics.csv python3 scripts/model_learning/evaluate.py datasets/stage4/test.csv models/model.pkl
+dvc run -n evaluate -d scripts/model_learning/evaluate.py -d datasets/stage4/test.csv -d models/model.pkl  -M metrics.csv python3 scripts/model_learning/evaluate.py datasets/stage4/test.csv models/model.pkl
+git status
+git add .
+git commit -m "added stage4"
+git push
+git status
+git push
+git commit -a "added stage4"
+git push
+cat .git/config 
+git status
+git push
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/mlops
+git push
+
+git push
+ssh -T git@github.com
+git push
+dvc push
+dvc repro
+ll datasets/
+ll evaluate/
+cat dvc.yaml 
+git status
+dvc push
+dvc repro
+sudo poweroff
+ip r
+cat .bash_history 
+scp .bash_history kas@192.168.50.42://Users/kas/urfu/airflow_hw/screenshots_pw_1/.bash_history_ml_srv
+ping 192.168.50.42
+ping 192.168.50.142
+scp .bash_history kas@192.168.50.142:/Users/kas/urfu/airflow_hw/screenshots_pw_1/.bash_history_ml_srv
